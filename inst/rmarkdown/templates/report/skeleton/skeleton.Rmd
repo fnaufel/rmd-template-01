@@ -10,7 +10,7 @@ output:
   html_document:
     theme: readable
     highlight: tango
-    css: styles.css
+    css: file:///home/fnaufel/RMarkdown/Template01/styles.css
     toc: true
     toc_depth: 2
     number_sections: true
