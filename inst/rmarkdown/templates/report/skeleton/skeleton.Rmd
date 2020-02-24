@@ -18,7 +18,7 @@ output:
     fig_height: 5
     fig_caption: true
     df_print: kable
-    code_folding: show
+    # code_folding: show
     self_contained: true
     keep_md: true
     # includes:
@@ -28,9 +28,10 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, fig.align = 'center')
 
 #library()
+library(gt)
 
 library(tidyverse)
 theme_set(
