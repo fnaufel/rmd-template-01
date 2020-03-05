@@ -18,9 +18,9 @@ output:
     fig_height: 5
     fig_caption: true
     df_print: kable
-    # code_folding: show
     self_contained: true
-    keep_md: true
+    # code_folding: show
+    # keep_md: true
     # includes:
     #   in_header: header.html
     #   before_body: doc_prefix.html
@@ -41,6 +41,26 @@ theme_set(
       panel.border = element_blank(),
       panel.grid.minor = element_blank()
     )
+)
+```
+
+```{js, echo=FALSE}
+
+// Make off-site links open in a new window/tab
+function changeTargets() {
+  $("a").attr(
+    "target", function() {
+      // Load local links locally
+      if (this.host == location.host) return "_self"
+      // Load off-site links in a new window
+      else return "_blank";
+    }
+  );
+}
+
+// Execute when document is ready
+$(
+  changeTargets
 )
 ```
 
