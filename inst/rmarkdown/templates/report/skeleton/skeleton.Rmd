@@ -9,6 +9,7 @@ lang: 'pt'
 output: 
   html_document:
     theme: readable
+           # https://bootswatch.com/3/readable/
     highlight: tango
     css: file:///home/fnaufel/RMarkdown/Template01/styles.css
     toc: true
@@ -46,6 +47,8 @@ theme_set(
 
 ```{js, echo=FALSE}
 
+// TODO: check if ok here. 
+// Other scripts already set the function to execute when document is ready.
 // Make off-site links open in a new window/tab
 function changeTargets() {
   $("a").attr(
