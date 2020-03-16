@@ -43,12 +43,10 @@ theme_set(
       panel.grid.minor = element_blank()
     )
 )
+
 ```
 
 ```{js, echo=FALSE}
-
-// TODO: check if ok here. 
-// Other scripts already set the function to execute when document is ready.
 // Make off-site links open in a new window/tab
 function changeTargets() {
   $("a").attr(
