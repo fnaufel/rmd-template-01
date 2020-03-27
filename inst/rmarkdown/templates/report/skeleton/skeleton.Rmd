@@ -4,7 +4,7 @@ subtitle: ''
 author: 'fnaufel'
 email: 'https://fnaufel.github.io/'
 date: '`r Sys.Date()`'
-lang: 'pt'
+lang: 'en'
 # TODO: include LaTeX fields
 output: 
   html_document:
@@ -46,7 +46,8 @@ theme_set(
 
 ```
 
-```{js, echo=FALSE}
+```{js javascript-init, echo=FALSE}
+
 // Make off-site links open in a new window/tab
 function changeTargets() {
   $("a").attr(
@@ -66,5 +67,5 @@ $(
 ```
 
 
-# Capítulo
+# Chapter
 
