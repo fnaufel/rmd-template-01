@@ -34,13 +34,29 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = 'center')
 #library()
 library(gt)
 
+library(summarytools)
+st_options(
+  plain.ascii = FALSE,
+  dfSummary.varnumbers = FALSE,
+  dfSummary.style = 'grid',
+  dfSummary.graph.magnif = .75
+)
+
 library(tidyverse)
 theme_set(
-  theme_linedraw() +
-    theme(
-      axis.line = element_blank(),
-      panel.border = element_blank(),
-      panel.grid.minor = element_blank()
+  theme_linedraw() +                         # Set simple theme for ggplot
+    theme(                                   # with some tweaks
+      axis.title.y.left = element_text(
+         angle = 0,                          # Never rotate y axis title
+         margin = margin(r = 20),            # Separate y axis title a little 
+         vjust = .5                          # Leave y axis title in the middle
+      ),
+      axis.title.x.bottom = element_text(
+         margin = margin(t = 20)             # Separate x axis title a little 
+      ),
+      axis.line = element_blank(),           # No axis lines
+      panel.border = element_blank(),        # No frame
+      panel.grid.minor = element_blank()     # No grid minor lines
     )
 )
 
