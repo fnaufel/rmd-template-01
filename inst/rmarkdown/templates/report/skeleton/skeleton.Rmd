@@ -29,11 +29,17 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.align = 'center')
+knitr::opts_chunk$set(
+  echo = TRUE, 
+  fig.align = 'center'
+)
 
 #library()
+
+# For nice tables
 library(gt)
 
+# For nice dataframe summaries
 library(summarytools)
 st_options(
   plain.ascii = FALSE,
@@ -42,7 +48,10 @@ st_options(
   dfSummary.graph.magnif = .75
 )
 
+# Tidy!
 library(tidyverse)
+
+# Sober theme for ggplot
 theme_set(
   theme_linedraw() +                         # Set simple theme for ggplot
     theme(                                   # with some tweaks
@@ -59,6 +68,24 @@ theme_set(
       panel.grid.minor = element_blank()     # No grid minor lines
     )
 )
+
+# Avoid scientific notation and use a comma as decimal separator
+options(
+  scipen = 15,
+  OutDec = ','
+)
+
+# Format a number with thousand separators (default point)
+# and decimal comma enclosed in curly braces for LaTeX printing.
+# CAREFUL: if called outside math mode, will print the braces!
+fm <- function(x, big = '.', decimal = '{,}') {
+  if (!is.numeric(x)) {
+    x
+  } else {
+    prettyNum(x, big.mark = big, decimal.mark = decimal)
+  }
+
+}
 
 ```
 
