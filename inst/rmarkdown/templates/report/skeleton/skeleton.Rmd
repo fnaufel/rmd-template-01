@@ -3,7 +3,7 @@ title: ''
 subtitle: ''
 author: 'fnaufel'
 email: 'https://fnaufel.github.io/'
-date: 'dd/mm/aa<br />(modificado em `r format(Sys.Date(), "%d/%m/%Y")`)'
+date: 'Criado em dd/mm/aaaa<br />Versão de `r format(Sys.Date(), "%d/%m/%Y")`'
 lang: 'en'
 # TODO: include LaTeX fields
 output: 
