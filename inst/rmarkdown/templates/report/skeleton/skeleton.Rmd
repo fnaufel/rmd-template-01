@@ -3,8 +3,8 @@ title: ''
 subtitle: ''
 author: 'fnaufel'
 email: 'https://fnaufel.github.io/'
-date: 'Criado em dd/mm/aaaa<br />Versão de `r format(Sys.Date(), "%d/%m/%Y")`'
-lang: 'en'
+date: 'Criado em //<br />Versão de `r format(Sys.Date(), "%d/%m/%Y")`'
+lang: 'pt'
 # TODO: include LaTeX fields
 output: 
   html_document:
