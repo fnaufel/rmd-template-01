@@ -11,7 +11,7 @@ output:
     theme: readable
            # https://bootswatch.com/3/readable/
     highlight: tango
-    css: file:///home/fnaufel/RMarkdown/Template01/styles.css
+    css: styles.css
     toc: true
     toc_depth: 2
     number_sections: true
