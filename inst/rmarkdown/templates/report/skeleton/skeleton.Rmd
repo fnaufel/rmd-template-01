@@ -3,7 +3,7 @@ title: ''
 subtitle: ''
 author: 'fnaufel'
 email: 'https://fnaufel.github.io/'
-date: 'Criado em //<br />Versão de `r format(Sys.Date(), "%d/%m/%Y")`'
+date: 'Criado em <br />Versão de `r format(Sys.Date(), "%d/%m/%Y")`'
 lang: 'pt'
 # TODO: include LaTeX fields
 output: 
@@ -29,10 +29,23 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(
+library(knitr)
+
+opts_chunk$set(
   echo = TRUE, 
-  fig.align = 'center'
+  collapse = TRUE,
+  cache = TRUE,
+  out.width = "70%",
+  fig.align = 'center',
+  fig.width = 6,
+  fig.asp = 0.618,  # 1 / phi
+  fig.show = "hold"
 )
+
+options(dplyr.print_min = 6, dplyr.print_max = 6)
+
+# Supress crayon output
+options(crayon.enabled = FALSE)
 
 #library()
 
@@ -85,6 +98,43 @@ fm <- function(x, big = '.', decimal = '{,}') {
     prettyNum(x, big.mark = big, decimal.mark = decimal)
   }
 
+}
+
+# To center the results of a chunk (image, video etc.)
+# Usage: 
+#         out.extra=center()
+#         
+center <- function(){
+  
+  if (is_html_output()) {
+    'class="center"'
+  }
+  
+}
+
+
+# To embed YT videos in HTML and the link (centered) in LaTeX
+embed_yt <- function(code) {
+
+  if (is_html_output()) {
+    include_url(
+      paste0(
+        'https://www.youtube.com/embed/',
+        code
+      )
+    )
+  } else {
+    cat(
+      paste0(
+        '```{=latex}\n',
+        '\\begin{center} \\url{https://youtu.be/',
+        code,
+        '} \\end{center}\n',
+        '```'
+      )
+    )
+  }
+  
 }
 
 ```
