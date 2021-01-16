@@ -3,11 +3,12 @@
 a {
   color: #7c480d;
   font-weight: 500;
+  text-decoration: underline;
 }
 
-/* Links in main text (not navigation) */
-main a {
-  text-decoration: underline;
+/* Links in TOC */
+#TOC a {
+  text-decoration: none;
 }
 
 /* I don't like the frame around images */
@@ -30,7 +31,7 @@ main a {
   margin: 1rem calc(-2px - 0.5em);
   padding: 1em 1em 1em 1em;
   border: 2px solid #ccc;
-  background: #f8f8f8 5px center/3em no-repeat; 
+  background: #f8f8f8 5px center/3em no-repeat;
 }
 
 .rmdbox > *:last-child, .rmdnote > *:last-child, .rmdcaution > *:last-child, .rmdimportant > *:last-child, .rmdtip > *:last-child, .rmdwarning > *:last-child {
@@ -48,7 +49,7 @@ main a {
   margin: 1rem calc(-2px - 0.5em);
   border: 2px solid #ccc;
   padding: 1em 1em 1em 6em;
-  background: #f8f8f8 25px center/3em no-repeat; 
+  background: #f8f8f8 25px center/3em no-repeat;
 }
 
 .rmdcaution {
@@ -145,16 +146,16 @@ h3 > .header-section-number {
 
 .rmdbox > h3,
 .rmdcaution > h3,
-.rmdimportant > h3, 
+.rmdimportant > h3,
 .rmdwarning > h3,
 .rmdtip > h3,
 .rmdnote > h3,
 .rmdbox > h4,
 .rmdcaution > h4,
-.rmdimportant > h4, 
+.rmdimportant > h4,
 .rmdwarning > h4,
 .rmdtip > h4,
-.rmdnote > h4 
+.rmdnote > h4
 {
   margin-top: 0;
 }
