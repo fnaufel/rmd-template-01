@@ -3,7 +3,7 @@ title: ''
 subtitle: ''
 author: 'fnaufel'
 email: 'https://fnaufel.github.io/'
-date: 'Criado em <br />Versão de `r format(Sys.Date(), "%d/%m/%Y")`'
+date: ' (v. `r format(Sys.Date(), "%d/%m/%Y")`)'
 lang: 'pt'
 # TODO: include LaTeX fields
 output: 
@@ -15,10 +15,8 @@ output:
     toc: true
     toc_depth: 2
     number_sections: true
-    fig_width: 7
-    fig_height: 5
     fig_caption: true
-    df_print: kable
+    df_print: paged
     self_contained: true
     # code_folding: show
     # keep_md: true
@@ -35,10 +33,9 @@ opts_chunk$set(
   echo = TRUE, 
   # collapse = TRUE,
   # cache = TRUE,
-  out.width = "70%",
+  out.width = "75%",
   fig.align = 'center',
   fig.width = 6,
-  fig.asp = 0.618,  # 1 / phi
   fig.show = "hold"
 )
 
@@ -46,11 +43,6 @@ options(dplyr.print_min = 6, dplyr.print_max = 6)
 
 # Supress crayon output
 options(crayon.enabled = FALSE)
-
-#library()
-
-# For nice tables
-library(gt)
 
 # For nice dataframe summaries
 library(summarytools)
