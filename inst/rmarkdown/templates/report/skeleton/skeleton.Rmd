@@ -44,6 +44,12 @@ options(dplyr.print_min = 6, dplyr.print_max = 6)
 # Supress crayon output
 options(crayon.enabled = FALSE)
 
+# Useful libraries
+library(glue)
+library(patchwork)
+library(latex2exp)
+library(kableExtra)
+
 # For nice dataframe summaries
 library(summarytools)
 st_options(
