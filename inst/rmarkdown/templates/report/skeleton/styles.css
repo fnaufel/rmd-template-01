@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Lexend&display=swap');
+
+body {
+  font-family: 'Lexend', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, nav, footer, .chapter-nav {
+  font-family: 'Roboto', sans-serif;
+}
 
 
 /* Fix gt tables */
